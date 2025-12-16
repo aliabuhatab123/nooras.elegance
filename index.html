@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎁 صندوق هدية فاخر | NOORAS ELEGANCE</title>
+    <!-- Enhanced Google Fonts: Added Cairo for better Arabic readability and modern feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Urbanist:wght@300;400;500;600;700;800;900&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Enhanced Icons: Upgraded to Font Awesome 6.5 for more modern icons and better performance -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- AOS Animation Library (kept as is) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Swiper JS (kept as is) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <style>
+        :root {
+            /* Brand Colors (enhanced contrast for better accessibility) */
+            --primary: #000000;
+            --secondary: #D4AF37;
+            --accent: #8B7355;
+            --light: #F8F8F8;
+            --white: #FFFFFF;
+            --text-dark: #1A1A1A;
+            --text-light: #666666;
+            --success: #2E8B57;
+            --radius: 16px;
+            --shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.12);
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --gradient: linear-gradient(135deg, var(--primary) 0%, #333333 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Enhanced Fonts: Use Cairo as primary for Arabic text for smoother rendering */
+            font-family: 'Cairo', 'El Messiri', 'Urbanist', sans-serif;
+            background-color: var(--white);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Modern Container (enhanced with better padding for mobile) */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 15px; /* Reduced padding for smaller screens */
+        }
+
+        /* Minimalist Header (enhanced sticky behavior and mobile layout) */
+        .header {
+            background: var(--white);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 15px 0; /* Slightly reduced for mobile */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-around;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Reduced gap for compactness */
+        }
+
+        .brand-logo {
+            font-family: 'Urbanist', sans-serif;
+            font-weight: 900;
+            font-size: 24px; /* Slightly smaller for mobile */
+            letter-spacing: -0.5px;
+            color: var(--primary);
+        }
+
+        .brand-logo .accent {
+            color: var(--accent);
+        }
+
+        .brand-tagline {
+            font-family: 'El Messiri', sans-serif;
+            font-size: 14px; /* Adjusted for mobile */
+            color: var(--accent);
+            margin-top: 2px;
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Reduced for mobile */
+        }
+
+        .urgent-badge {
+            background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+            color: white;
+            padding: 6px 15px; /* Compact for mobile */
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 12px; /* Smaller text */
+            animation: pulse 2s infinite;
+        }
+
+        /* Video Hero Section (enhanced grid for better mobile stacking) */
+        .video-hero {
+            padding: 60px 0; /* Reduced padding for mobile */
+            background: linear-gradient(135deg, #fafafa 0%, var(--white) 100%);
+        }
+
+        .video-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px; /* Default to single column for mobile */
+            align-items: center;
+        }
+
+        @media (min-width: 992px) {
+            .video-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+            }
+        }
+
+        .video-player {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: var(--transition);
+        }
+
+        .video-player:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 300px; /* Adjusted height for mobile */
+            background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .video-placeholder {
+                height: 500px;
+            }
+        }
+
+        .tiktok-icon {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 8px;
+            border-radius: 8px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+        }
+
+        .play-button {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 24px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            background: white;
+        }
+
+        .hero-content {
+            padding-right: 0; /* Adjusted for RTL and mobile */
+            text-align: center; /* Center for mobile */
+        }
+
+        @media (min-width: 992px) {
+            .hero-content {
+                padding-right: 20px;
+                text-align: right;
+            }
+        }
+
+        .hero-title {
+            font-family: 'El Messiri', serif;
+            font-size: 36px; /* Smaller base for mobile */
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 48px;
+            }
+        }
+
+        .hero-title .highlight {
+            color: var(--accent);
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-size: 18px; /* Adjusted for mobile */
+            color: var(--text-light);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .features-list {
+            margin: 25px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .feature-icon {
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 10px;
+            flex-shrink: 0;
+        }
+
+        /* Enhanced Gallery Section: Improved grid for mobile, added lazy loading and object-fit */
+        .gallery-section {
+            background: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Default to 2 columns for mobile */
+            gap: 10px;
+            max-height: none; /* Remove max-height for better flow */
+            overflow: visible;
+        }
+
+        @media (min-width: 576px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 15px;
+            }
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 1/1;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+            loading: lazy; /* Added lazy loading for performance */
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: var(--transition);
+            font-size: 14px; /* Smaller for mobile */
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        /* WhatsApp CTA Section (enhanced button size and animation for mobile) */
+        .whatsapp-cta-section {
+            padding: 60px 0; /* Reduced */
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+        }
+
+        .whatsapp-cta-container {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .whatsapp-icon-large {
+            font-size: 60px; /* Smaller for mobile */
+            margin-bottom: 25px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @media (min-width: 768px) {
+            .whatsapp-icon-large {
+                font-size: 80px;
+            }
+        }
+
+        .whatsapp-title {
+            font-family: 'El Messiri', serif;
+            font-size: 32px; /* Adjusted */
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        @media (min-width: 768px) {
+            .whatsapp-title {
+                font-size: 42px;
+            }
+        }
+
+        .whatsapp-subtitle {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: white;
+            color: #25D366;
+            padding: 15px 40px; /* Compact */
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            background: #f8f8f8;
+        }
+
+        /* Product Showcase (enhanced swiper for touch on mobile) */
+        .product-showcase {
+            padding: 60px 0;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-family: 'El Messiri', serif;
+            font-size: 32px; /* Adjusted */
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 42px;
+            }
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 400px; /* Adjusted for mobile */
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .swiper {
+                height: 500px;
+            }
+        }
+
+        .swiper-slide {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+            loading: lazy;
+        }
+
+        .swiper-slide:hover img {
+            transform: scale(1.05);
+        }
+
+        .slide-overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 30px;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .swiper-slide:hover .slide-overlay {
+            transform: translateY(0);
+        }
+
+        /* GIF Section (enhanced height) */
+        .gif-section {
+            padding: 60px 0;
+            background: var(--light);
+        }
+
+        .gif-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .gif-placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(45deg, #2c3e50, #4a6491);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .gif-placeholder {
+                height: 400px;
+            }
+        }
+
+        .gif-label {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Pricing Section (enhanced card for mobile centering) */
+        .pricing-section {
+       padding: 60px 0 10px 0;
+    background: var(--white);
+    margin-bottom: -40px;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            max-width: 500px; /* Reduced max-width */
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: 15px;
+            left: -25px;
+            background: var(--secondary);
+            color: white;
+            padding: 6px 30px;
+            transform: rotate(-45deg);
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        .price {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .old-price {
+            font-size: 20px;
+            color: var(--text-light);
+            text-decoration: line-through;
+            margin-bottom: 8px;
+        }
+
+        .current-price {
+            font-family: 'El Messiri', serif;
+            font-size: 48px; /* Adjusted */
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        @media (min-width: 768px) {
+            .current-price {
+                font-size: 64px;
+            }
+        }
+
+        .current-price .currency {
+            font-size: 24px;
+            vertical-align: super;
+        }
+
+        .price-note {
+            text-align: center;
+            color: var(--success);
+            font-weight: 600;
+            margin-top: 8px;
+            font-size: 16px;
+        }
+
+        /* Order Form (enhanced grid for mobile, better input focus) */
+        .order-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+        }
+
+        .form-container {
+            max-width: 600px; /* Reduced */
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 40px 20px; /* Adjusted padding */
+            box-shadow: var(--shadow);
+            border: 1px dashed rgba(139, 115, 85, 0.3);
+        }
+
+        .form-title {
+            font-family: 'El Messiri', serif;
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .form-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 14px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px 18px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            font-size: 14px;
+            font-family: 'Cairo', sans-serif;
+            transition: var(--transition);
+            background: var(--light);
+            text-align: right;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+            background: var(--white);
+        }
+
+        .phone-input-container {
+            position: relative;
+        }
+
+        .phone-prefix {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+.uae-flag {
+width: 20px;
+height: 14px;
+background-image: linear-gradient(to right, #FF0000 25%, transparent 25%),
+linear-gradient(to bottom, #009900 33.3%, #FFFFFF 33.3% 66.6%, #000000 66.6%);
+background-size: 100% 100%;
+border-radius: 2px;
+}
+
+        .phone-input {
+            padding-left: 90px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(139, 115, 85, 0.2);
+        }
+
+        .whatsapp-icon {
+            font-size: 20px;
+        }
+
+        /* Details Accordion Section (enhanced touch-friendly headers) */
+        .details-section {
+            background: var(--light);
+        }
+
+        .accordion {
+            max-width: 700px; /* Reduced */
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            background: var(--white);
+            border-radius: var(--radius);
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .accordion-header {
+            padding: 20px 25px;
+            background: var(--primary);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .accordion-header:hover {
+            background: var(--accent);
+        }
+
+        .accordion-header i {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-header.active i {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-content.active {
+            padding: 25px;
+            max-height: 1000px;
+        }
+
+        .accordion-content ul {
+            list-style: none;
+            padding-right: 15px;
+        }
+
+        .accordion-content li {
+            margin-bottom: 12px;
+            padding-right: 10px;
+            position: relative;
+        }
+
+        .accordion-content li:before {
+            content: "•";
+            color: var(--accent);
+            font-size: 20px;
+            position: absolute;
+            right: -12px;
+            top: -4px;
+        }
+
+        /* Features Grid (enhanced to stack on mobile) */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Stack for very small screens */
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        @media (min-width: 576px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .features-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+        }
+
+        .feature-card-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(139, 115, 85, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: var(--accent);
+            font-size: 20px;
+        }
+
+        /* Footer (enhanced layout for mobile) */
+        .footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 50px 0 25px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .footer-brand {
+            font-family: 'Urbanist', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .footer-tagline {
+            color: rgba(255, 255, 255, 0.7);
+            font-family: 'El Messiri', sans-serif;
+            font-size: 16px;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            width: 35px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 12px;
+        }
+
+        /* Animations (kept as is) */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Additional Responsive Adjustments */
+        @media (max-width: 576px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-title {
+                font-size: 28px;
+            }
+
+            .submit-btn {
+                font-size: 16px;
+                padding: 15px;
+            }
+        }
+        /* إضافة CSS لعناصر التشجيع والدروب داون */
+.trust-badges {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+    padding: 20px;
+    background: rgba(139, 115, 85, 0.05);
+    border-radius: var(--radius);
+    border: 1px dashed rgba(139, 115, 85, 0.3);
+}
+
+@media (min-width: 576px) {
+    .trust-badges {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.trust-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 15px 10px;
+    transition: var(--transition);
+}
+
+.trust-badge:hover {
+    transform: translateY(-5px);
+}
+
+.badge-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--accent);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.badge-text {
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+/* تحسين الدروب داون */
+.form-control {
+    width: 100%;
+    padding: 15px 18px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    font-size: 14px;
+    font-family: 'Cairo', sans-serif;
+    transition: var(--transition);
+    background: var(--light);
+    text-align: right;
+    cursor: pointer;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+    background: var(--white);
+}
+
+/* تخصيص الدروب داون */
+select.form-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%238B7355' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left 15px center;
+    background-size: 12px;
+    padding-right: 15px;
+    padding-left: 40px;
+}
+
+/* تعديل زر الإرسال */
+.submit-btn {
+    width: 100%;
+    padding: 18px;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.submit-btn:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(139, 115, 85, 0.2);
+}
+    </style>
+</head>
+<body>
+    <!-- Header (content kept, layout enhanced via CSS) -->
+    <header class="header" data-aos="fade-down">
+        <div class="container">
+            <div class="header-content">
+                <div class="brand">
+                    <div>
+                        <div class="brand-logo">NOORAS <span class="accent">ELEGANCE</span></div>
+                        <div class="brand-tagline">نوراس ايليجانس</div>
+                    </div>
+                </div>
+                <div class="header-cta">
+                    <div class="urgent-badge">🚚 توصيل مجاني</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Video Hero Section (content kept, mobile enhancements in CSS) -->
+    <section class="video-hero">
+        <div class="container">
+            <div class="video-container">
+                <div class="hero-content" data-aos="fade-left">
+                    <h1 class="hero-title">  صندوق هدية <span class="highlight">فاخر</span><br> ساعة + أساور + خواتم  </h1>
+                    <p class="hero-subtitle"> هدية مميزة جاهزة للاهداء تنقش <strong>بالاسم حسب طلبك </strong>، صممت بأناقة تليق بذوقك الرفيع. كل قطعة مصنوعة بدقة وجودة عالية تضمن البقاء متألقاً لأطول فترة. </p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div> <strong>ساعة مطلية ذهب</strong> - تصميم كلاسيكي عصري </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div> <strong>أسورتين أنيقتين</strong> - واحدة منها تنقش بالاسم </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div> <strong>خاتمين متميزين</strong> - تناسق كامل مع المجموعة </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compact Image Gallery (enhanced with lazy loading in img tags) -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">صور للهدية الفاخرة </h2>
+                <p class="section-subtitle">تصميماتنا تجمع بين الأناقة الكلاسيكية واللمسة العصرية</p>
+            </div>
+            <div class="gallery-grid" data-aos="zoom-in">
+                <div class="gallery-item">
+                    <img src="./images/img1.jpg" alt="الصندوق الكامل" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>الصندوق الفاخر الكامل</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./images/img4.jpg" alt="الساعة الذهبية" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>الساعة الذهبية</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp CTA Section (content kept) -->
+    <section class="whatsapp-cta-section">
+        <div class="container">
+            <div class="whatsapp-cta-container" data-aos="fade-up">
+                <div class="whatsapp-icon-large">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h2 class="whatsapp-title">اطلب الهدية الفاخرة الآن عبر الواتساب!</h2>
+                <p class="whatsapp-subtitle"> لا تضيع فرصة الحصول على هذا العرض المميز! تواصل معنا مباشرة عبر واتساب واحصل على استشارة مجانية وتأكيد طلبك خلال دقائق. </p>
+                <a href="https://wa.me/971502571537" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> تواصل معنا عبر واتساب
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section (content kept) -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">💰 العرض المميز</h2>
+                <p class="section-subtitle">جودة فاخرة بسعر لا يُعوض</p>
+            </div>
+            <div class="pricing-card" data-aos="flip-up">
+                <div class="pricing-badge">خصم حصري</div>
+                <div class="price">
+                    <div class="old-price">السعر الأصلي: 450 درهم</div>
+                    <div class="current-price">
+                        <span class="currency"> درهم شامل التوصيل </span>380
+                    </div>
+                    <div class="price-note">سارع بالطلب قبل نفاذ المخزون</div>
+                </div>
+                <div style="text-align: center; margin: 40px 0;">
+                    <div style="font-size: 24px; font-weight: 700; color: var(--primary); margin-bottom: 20px;"> 🚚 الدفع عند الاستلام </div>
+                    <div style="font-size: 20px; color: var(--success);"> <i class="fas fa-bolt"></i> التوصيل خلال 24 ساعة في الإمارات </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Order Form (نموذج الطلب المحدث) -->
+<section class="order-section">
+    <div class="container">
+        <div class="form-container" data-aos="zoom-in">
+            <h2 class="form-title">📦 أطلب الآن واحصل على هديتك</h2>
+            <p class="form-subtitle">املأ النموذج وسنتصل بك خلال دقائق لتأكيد طلبك</p>
+            <form id="orderForm">
+                <!-- صف الأسم والإمارة -->
+                <div style="display: grid; grid-template-columns: 1fr; gap: 20px; margin-bottom: 25px;">
+                    <div class="form-group">
+                        <label class="form-label">الاسم الكامل *</label>
+                        <input type="text" class="form-control" placeholder="أدخل اسمك الكامل" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">الإمارة *</label>
+                        <select class="form-control" required>
+                            <option value="" selected disabled>اختر إمارتك</option>
+                            <option value="dubai">دبي</option>
+                            <option value="abudhabi">أبوظبي</option>
+                            <option value="sharjah">الشارقة</option>
+                            <option value="ajman">عجمان</option>
+                            <option value="rasalkhaimah">رأس الخيمة</option>
+                            <option value="fujairah">الفجيرة</option>
+                            <option value="umm">أم القيوين</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- حقل العنوان الجديد -->
+                <div class="form-group">
+                    <label class="form-label">العنوان التفصيلي *</label>
+                    <textarea class="form-control" placeholder="المنطقة - الشارع - رقم المبنى - الطابق - الشقة" rows="3" required></textarea>
+                </div>
+                
+                <!-- حقل رقم الهاتف -->
+                <div class="form-group">
+                    <label class="form-label">رقم الهاتف *</label>
+                    <div class="phone-input-container">
+                        <div class="phone-prefix">
+                            <div class="uae-flag"></div>
+                            <span>+971</span>
+                        </div>
+                        <input type="tel" class="form-control phone-input" placeholder="50 123 4567" required>
+                    </div>
+                    <small style="display: block; margin-top: 8px; color: var(--text-light); text-align: right;"> أدخل الرقم بدون +971 (مثال: 501234567) </small>
+                </div>
+                
+                <!-- حقل النقش -->
+                <div class="form-group">
+                    <label class="form-label">النقش على الإسورة (اختياري)</label>
+                    <input type="text" class="form-control" placeholder="الاسم المراد نقشه (حد أقصى 10 أحرف)" maxlength="10">
+                </div>
+                
+                <!-- عناصر التشجيع (Trust Badges) -->
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="badge-text">
+                            <strong>الدفع عند الاستلام</strong>
+                        </div>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <div class="badge-text">
+                            <strong>توصيل مجاني</strong>
+                        </div>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="badge-text">
+                            <strong>ضمان سنتين</strong>
+                        </div>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="badge-text">
+                            <strong>خدمة العملاء</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- زر إرسال الطلب -->
+                <button type="submit" class="submit-btn">
+                    <i class="fab fa-whatsapp whatsapp-icon"></i> أرسل الطلب عبر واتساب الآن
+                </button>
+            </form>
+            <div style="text-align: center; margin-top: 30px; color: var(--text-light); font-size: 14px;">
+                <p>🎁 هدية مجانية مع كل طلب: علبة هدايا فاخرة مع شريط حرير</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Details Accordion Section (content kept) -->
+    <section class="details-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-subtitle">كل ما تحتاج معرفته عن منتجاتنا وخدماتنا</p>
+            </div>
+            <div class="accordion" data-aos="fade-up">
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span><i class="fas fa-phone-alt"></i> معلومات التواصل والدعم</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><strong>رقم الهاتف:</strong> +971 50 257 1537</li>
+                            <li><strong>الواتساب:</strong> نفس الرقم للتواصل المباشر</li>
+                            <li><strong>البريد الإلكتروني:</strong> info@nooraselegance.ae</li>
+                            <li><strong>ساعات العمل:</strong> 9 صباحاً - 10 مساءً (توقيت الإمارات)</li>
+                            <li><strong>الدعم الفني:</strong> متاح على مدار الأسبوع</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span><i class="fas fa-shield-alt"></i> الضمان وسياسة الإرجاع</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><strong>ضمان الجودة:</strong> 60 يوم ضد العيوب المصنعية</li>
+                            <li><strong>سياسة الإرجاع:</strong> 7 أيام للإرجاع مع الاحتفاظ بالفاتورة</li>
+                            <li><strong>الشروط:</strong> المنتج يجب أن يكون في حالته الأصلية</li>
+                            <li><strong>التعويض:</strong> استبدال أو استرجاع كامل المبلغ</li>
+                            <li><strong>التوصيل المجاني:</strong> يشمل عمليات الإرجاع أيضاً</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span><i class="fas fa-shipping-fast"></i> معلومات الشحن والتوصيل</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><strong>دبي وأبوظبي:</strong> توصيل خلال 24 ساعة</li>
+                            <li><strong>باقي الإمارات:</strong> توصيل خلال 48 ساعة</li>
+                            <li><strong>التوصيل المجاني:</strong> لجميع الطلبات داخل الإمارات</li>
+                            <li><strong>الدفع:</strong> عند الاستلام فقط</li>
+                            <li><strong>التتبع:</strong> لتتبع وصول الطلبية راسلنا عبر الواتساب</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span><i class="fas fa-gem"></i> تفاصيل المنتج والمواد</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><strong>الساعة:</strong> مطلية بذهب عيار 18 قيراط</li>
+                            <li><strong>الأساور:</strong> من الفولاذ المقاوم للصدأ</li>
+                            <li><strong>الخواتم:</strong> مطلي بالروديوم لمنع الصدأ</li>
+                            <li><strong>الصندوق:</strong> خشب طبيعي مع تنجيد حريري</li>
+                            <li><strong>النقش:</strong> ليزر دقيق يضمن ثبات النقش</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features (content kept) -->
+    <section class="product-showcase">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">🌟 لماذا NOORAS ELEGANCE؟</h2>
+                <p class="section-subtitle">نقدم لك تجربة تسوق استثنائية</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 style="font-size: 22px; margin-bottom: 15px; color: var(--primary);">جودة فائقة</h3>
+                    <p>منتجاتنا مصنوعة من مواد عالية الجودة مع تشطيبات دقيقة تليق بأناقتك</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 style="font-size: 22px; margin-bottom: 15px; color: var(--primary);">توصيل سريع</h3>
+                    <p>توصيل خلال 24 ساعة في دبي وأبوظبي، و48 ساعة لباقي الإمارات</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 style="font-size: 22px; margin-bottom: 15px; color: var(--primary);">ضمان الجودة</h3>
+                    <p>ضمان 60 يوم ضد العيوب المصنعية مع إمكانية الاستبدال</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-user-edit"></i>
+                    </div>
+                    <h3 style="font-size: 22px; margin-bottom: 15px; color: var(--primary);">تخصيص مجاني</h3>
+                    <p>نقش اسم مجاني على أحد الأساور لهدية أكثر تميزاً وشخصية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (content kept) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-brand">NOORAS ELEGANCE</div>
+                    <div class="footer-tagline">نوراس ايليجانس</div>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+971 50 257 1537</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>الطلب عبر واتساب</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@nooraselegance.ae</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@nooras.elegance" class="social-link">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.snapchat.com/@nooras.elegance" class="social-link">
+                            <i class="fab fa-snapchat-ghost"></i>
+                        </a>
+                        <a href="https://www.instagram.com/nooras.elegance" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=971502571537" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="font-size: 20px; margin-bottom: 20px; color: white;">معلومات سريعة</h3>
+                    <div style="display: grid; gap: 15px;">
+                        <div style="color: rgba(255, 255, 255, 0.8);">
+                            <i class="fas fa-shipping-fast" style="margin-left: 10px;"></i>
+                            <span>توصيل مجاني لجميع الإمارات</span>
+                        </div>
+                        <div style="color: rgba(255, 255, 255, 0.8);">
+                            <i class="fas fa-hand-holding-usd" style="margin-left: 10px;"></i>
+                            <span>الدفع عند الاستلام</span>
+                        </div>
+                        <div style="color: rgba(255, 255, 255, 0.8);">
+                            <i class="fas fa-exchange-alt" style="margin-left: 10px;"></i>
+                            <span>إمكانية الاسترجاع خلال 7 أيام</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 NOORAS ELEGANCE. جميع الحقوق محفوظة.</p>
+                <p style="margin-top: 10px;">متجر الإلكتروني الرسمي لمنتجات نوراس الأنيقة في الإمارات العربية المتحدة</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Libraries (updated Font Awesome version in link) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Initialize Swiper (added touch sensitivity for mobile)
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+            speed: 800,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'slide',
+            touchRatio: 1.5, // Enhanced touch for mobile
+        });
+
+  
+
+        // Accordion Function (kept as is)
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            const allHeaders = document.querySelectorAll('.accordion-header');
+            const allContents = document.querySelectorAll('.accordion-content');
+            allHeaders.forEach(h => {
+                if (h !== header) {
+                    h.classList.remove('active');
+                }
+            });
+            allContents.forEach(c => {
+                if (c !== content) {
+                    c.classList.remove('active');
+                }
+            });
+            header.classList.toggle('active');
+            content.classList.toggle('active');
+        }
+/// تحديث دالة إرسال الفورم - بدون رموز تعبيرية
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // الحصول على القيم من الحقول الموجودة فعلياً في الصفحة
+    const nameInput = this.querySelector('input[type="text"]');
+    const cityInput = this.querySelector('input[placeholder*="المدينة"]');
+    const phoneInput = this.querySelector('.phone-input');
+    const engravingInput = this.querySelector('input[placeholder*="الاسم المراد"]');
+    
+    // إذا كان هناك دروب داون للإمارات بدل حقل المدينة
+    const emirateSelect = this.querySelector('select');
+    const addressTextarea = this.querySelector('textarea');
+    
+    // إنشاء البيانات مع التحقق من العناصر الموجودة فعلياً
+    const formData = {
+        name: nameInput ? nameInput.value : '',
+        city: cityInput ? cityInput.value : '',
+        phone: phoneInput ? phoneInput.value.replace(/\s/g, '') : '',
+        engraving: engravingInput ? engravingInput.value : 'لا يوجد'
+    };
+    
+    // إضافة الحقول الجديدة إذا كانت موجودة
+    if (emirateSelect) {
+        const emirateNames = {
+            'dubai': 'دبي',
+            'abudhabi': 'أبوظبي',
+            'sharjah': 'الشارقة',
+            'ajman': 'عجمان',
+            'rasalkhaimah': 'رأس الخيمة',
+            'fujairah': 'الفجيرة',
+            'umm': 'أم القيوين'
+        };
+        formData.emirate = emirateNames[emirateSelect.value] || emirateSelect.value;
+    }
+    
+    if (addressTextarea) {
+        formData.address = addressTextarea.value;
+    }
+    
+    // التحقق من صحة رقم الهاتف
+    if (formData.phone.length < 8) {
+        alert('يرجى إدخال رقم هاتف صحيح (8 أرقام على الأقل)');
+        if (phoneInput) phoneInput.focus();
+        return;
+    }
+    
+    // إنشاء رسالة الواتساب - بدون رموز تعبيرية
+    let message = 'طلب جديد - NOORAS ELEGANCE%0A%0A';
+    message += 'الاسم: ' + formData.name + '%0A';
+    
+    if (formData.emirate) {
+        message += 'الإمارة: ' + formData.emirate + '%0A';
+    } else if (formData.city) {
+        message += 'المدينة: ' + formData.city + '%0A';
+    }
+    
+    if (formData.address) {
+        message += 'العنوان: ' + formData.address + '%0A';
+    }
+    
+    message += 'رقم الهاتف: +971 ' + formData.phone + '%0A';
+    message += 'النقش: ' + formData.engraving + '%0A';
+    message += 'المنتج: صندوق هدية فاخر (ساعة + أساور + خواتم)%0A';
+    message += 'السعر: 380 درهم%0A';
+    message += 'التوصيل: خلال 24 ساعة%0A%0A';
+    message += 'أرغب في تأكيد هذا الطلب.';
+    
+    const whatsappNumber = '971502571537';
+    window.open('https://wa.me/' + whatsappNumber + '?text=' + message, '_blank');
+    
+    alert('شكراً لك! سيتم فتح واتساب لإرسال طلبك. إذا لم يفتح تلقائياً، يرجى إرسال الرسالة إلى +971 50 257 1537');
+    
+    setTimeout(() => {
+        this.reset();
+    }, 2000);
+});
+        // Auto-scroll to form (kept as is)
+        document.querySelector('.urgent-badge').addEventListener('click', function() {
+            document.querySelector('.order-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
